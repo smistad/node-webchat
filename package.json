@@ -1,0 +1,8 @@
+{
+  "name": "node-webchat",
+  "version": "0.0.1",
+  "description": "awesome webchat in node",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
