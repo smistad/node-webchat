@@ -24,6 +24,11 @@ io.on('connection', function(socket){
             io.emit('chat message', socket.username + ': ' + msg);
         }
     });
+
+    socket.on('disconnect', function() {
+        // Broadcast to everyone else that this user joined
+        socket.broadcast.emit('chat message', socket.username + ' left the chat!');
+    });
 });
 
 http.listen(3000, function(){
